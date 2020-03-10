@@ -25,9 +25,12 @@ function getRandomNumber(max) {
         if (randomNumber > numberIntupElem.value){
             container1Elem.innerHTML = "DEMASIADO PEQUEÑO";
             
-        } else if(randomNumber == numberIntupElem.value){
+        }else if(randomNumber == numberIntupElem.value){
             container1Elem.innerHTML = "HAS GANADO CAMPEONA";
-        }else{
+        }else if (numberIntupElem.value < 1 || numberIntupElem.value > 100 ){
+            container1Elem.innerHTML = "NUMERO ENTRE 1 Y 100";
+        }
+        else{
             container1Elem.innerHTML = "DEMASIADO ALTO";
         }
     }
